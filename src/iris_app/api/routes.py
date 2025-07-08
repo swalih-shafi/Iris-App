@@ -16,3 +16,9 @@ def health_check():
         "status": "running",
         "message": "Iris Classifier API is healthy"
     }
+
+@router.get("/ping")
+def ping():
+    return {
+        "message": "pong"
+    }

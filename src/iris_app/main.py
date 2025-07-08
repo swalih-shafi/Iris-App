@@ -1,5 +1,7 @@
 from fastapi import FastAPI
-from iris_app.api.routes import router
+from iris_app.api import router
+
+
 
 app = FastAPI(
     title="Iris Classifier API",

@@ -1,0 +1,32 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home | Iris App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1f1f1f;
+      color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      padding: 2rem;
+      background: #292929;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Welcome, {{ username }} 👋</h1>
+    <p>You're logged in successfully to the Iris Classifier App.</p>
+  </div>
+</body>
+</html>

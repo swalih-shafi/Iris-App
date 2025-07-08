@@ -1,0 +1,25 @@
+{
+  "_default": {
+    "1": {
+      "id": "7667afe7-bbca-4b88-9c2b-6df92da78737",
+      "username": "swalih",
+      "email": "swalih@example.com",
+      "password": "$2b$12$ucKmCniAPs3DAAxN62W0PereVy5MFz0fz7AyHoI0RPwLsw1jlAX.C",
+      "created_at": "2025-07-08T16:14:45.166915"
+    },
+    "2": {
+      "id": "ba8e6a9f-e2da-48c0-9879-c31fb7ebd7f0",
+      "username": "anima",
+      "email": "anima@example.com",
+      "password": "$2b$12$Hl4iLCAhQbOSGWOgE8fgYOWFPcs7aq8Avp9Q5Uhh2vlUR6cs2grDO",
+      "created_at": "2025-07-08T16:15:23.167115"
+    },
+    "3": {
+      "id": "2ea0b07e-71ba-452e-bf46-951034bfc7fe",
+      "username": "ahmed",
+      "email": "ahmed@example.com",
+      "password": "$2b$12$4dX5FXh9BfqRKY.a151oe.E/9rhbuHkT9fHhRKImVLL12VOhAZ0sm",
+      "created_at": "2025-07-08T21:34:53.709863"
+    }
+  }
+}
