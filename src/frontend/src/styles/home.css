@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background-color: #f7f7f7;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.home-box {
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.iris-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.welcome-text {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

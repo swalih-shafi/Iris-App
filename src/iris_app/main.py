@@ -9,4 +9,4 @@ app = FastAPI(
     description="API for predicting Iris flower species"
 )
 
-app.include_router(router)
+app.include_router(router, prefix="/api")

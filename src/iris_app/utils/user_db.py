@@ -4,7 +4,6 @@ from iris_app.utils.security import hash_password, verify_password
 import uuid
 from datetime import datetime
 
-# Ensure path to DB file
 DB_PATH = Path(__file__).resolve().parent.parent / "data" / "users.json"
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
