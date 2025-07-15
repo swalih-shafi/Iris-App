@@ -35,7 +35,7 @@
 }
 
 .inputButton {
-  background: #8938df;
+  background: var(--CTA);
   color: white;
   width: 4rem;
   cursor: pointer;
@@ -48,5 +48,5 @@
 }
 
 .inputButton:hover {
-  background: #5000a8;
+  background: var(--secondary);
 }

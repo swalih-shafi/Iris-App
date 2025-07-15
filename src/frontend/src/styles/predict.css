@@ -15,7 +15,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .predict-right {
   width: 60%;
-  background-color: #e7deef;
+  background-color: var(--surface);
+  padding: 0rem 10rem;
+  font-family: 'Montserrat';
 }
 
 .predict-left {
@@ -71,7 +73,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  background: #6900d1;
+  background: var(--secondary);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -80,7 +82,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .predict-button:hover {
-  background: #5000a8;
+  background: var(--primary);
 }
 
 /* RIGHT RESULTS */

@@ -3,10 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #6a00d1;
-  font-family: 'Monsterrat', sans-serif;
+  background-color: var(--primary);
   min-height: 8vh;
   max-height: 8vh;
+  position: relative;
+  z-index: 10;
 }
 
 .logo-section {

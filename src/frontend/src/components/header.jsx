@@ -21,6 +21,7 @@ const Header = () => {
 
       <nav className="nav-links">
         <Link to="/predict">PREDICT</Link>
+        <Link to="/data">DATASET</Link>
         {isLoggedIn ? (
           <>
             <Link to="/history">HISTORY</Link>
@@ -28,6 +29,7 @@ const Header = () => {
           </>
         ) : (
           <>
+            <Link to="/data">Dataset</Link>
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
           </>

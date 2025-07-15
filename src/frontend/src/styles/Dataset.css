@@ -1,0 +1,133 @@
+.dataset-container {
+  padding: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.dataset-container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.iris-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.iris-table th,
+.iris-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}.iris-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.iris-table th {
+  background-color: var(--surface);
+  font-weight: 600;
+  color: #333;
+}
+
+.iris-table tr:hover {
+  background-color: #f0f4ff;
+}
+
+.dataset-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.download-buttons button {
+  background-color: var(--CTA);
+  color: white;
+  padding: 8px 16px;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.download-buttons button:hover {
+  background-color: var(--secondary);
+}
+
+.table-wrapper {
+    height: 60vh;
+  overflow-y: auto;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.iris-table th {
+  position: sticky;
+  top: 0;
+  background-color: var(--surface); /* Same as before */
+  z-index: 2; /* Keeps it above table cells while scrolling */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+.sortable-header {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.sortable-header:hover {
+  background-color: #d7e6ff;
+}
+
+.sortable-header span {
+  margin-left: 6px;
+  font-size: 0.85rem;
+  color: #555;
+  transition: transform 0.2s ease;
+}
+.sort-icon {
+  display: inline-block;
+  width: 1rem;
+  margin-left: 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.invisible-placeholder {
+  visibility: hidden;
+}
+.iris-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.iris-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White for odd rows */
+}
+.filter-btn {
+  background-color: var(--CTA);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--secondary);
+}

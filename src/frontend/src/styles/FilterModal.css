@@ -1,0 +1,60 @@
+.filter-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 38, 71, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.filter-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.filter-modal h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group label {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--CTA);
+  color: white;
+  transition: 0.2s;
+}
+
+.modal-actions .cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
