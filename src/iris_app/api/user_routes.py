@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from iris_app.models.user_model import UserCreate, UserLogin
+from iris_app.models.request_models import UserCreate, UserLogin
 from iris_app.utils.user_db import create_user, authenticate_user
 from iris_app.utils.token import create_access_token
 

@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #6a00d1;
+  font-family: 'Monsterrat', sans-serif;
+  min-height: 8vh;
+  max-height: 8vh;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.app-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-left: 0.5vw;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.3rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.nav-links a:hover, .user-icon:hover {
+  color: #d7b0fe;
+}
+
+.user-icon {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
