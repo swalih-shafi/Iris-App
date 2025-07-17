@@ -48,7 +48,7 @@ function Predict() {
 
     try {
   const token = localStorage.getItem("token"); // make sure this key is correct
-  const res = await fetch("/api/predict", {
+  const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/predict`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

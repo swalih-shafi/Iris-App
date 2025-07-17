@@ -16,7 +16,7 @@ function History() {
 
     const username = jwtDecode(token).username;
 
-    fetch("/api/history", {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/history`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
