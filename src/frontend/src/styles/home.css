@@ -1,21 +1,50 @@
 body {
   margin: 0;
-  background-color: #f7f7f7;
-  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--lighter);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .home-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+  height: calc(100vh - 4rem);
 }
 
 .home-box {
-  text-align: center;
   animation: fadeIn 0.6s ease;
 }
+
+.home-buttons {
+  display: flex;
+  gap: 2rem;
+  padding-top: 5vh;
+}
+
+.home-buttons button {
+  background-color: var(--secondary);
+  width: 10vw;
+  min-width: 170px;
+  font-weight: 600;
+  border: none;
+}
+
+.home-buttons button:hover {
+  background-color: white;
+  color: var(--secondary);
+}
+
+.home-buttons button:nth-child(2) {
+  background-color: white;
+  color: var(--secondary);
+  border: var(--secondary) solid 0.2rem;
+}
+.home-buttons button:nth-child(2):hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
 
 .iris-image {
   max-width: 300px;
@@ -29,6 +58,9 @@ body {
   font-weight: 600;
   color: #333;
   margin: 0;
+}
+.sub-text{
+  font-weight: 400;
 }
 
 @keyframes fadeIn {

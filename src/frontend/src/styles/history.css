@@ -1,0 +1,30 @@
+.empty-history {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.empty-history .predict-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--CTA);
+  text-decoration: none;
+}
+
+.empty-history .predict-link:hover {
+  text-decoration: underline;
+}
+
+.history-controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;    
+}
+
+.history-data {
+    display: flex;
+    gap: 1rem;
+}

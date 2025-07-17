@@ -1,0 +1,25 @@
+# Use official Python base
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install Poetry
+RUN pip install --no-cache-dir poetry
+
+# Copy only dependency files first (for caching layers)
+COPY pyproject.toml poetry.lock ./
+
+# Install dependencies with retries and timeout config
+RUN poetry config virtualenvs.create false \
+ && poetry config installer.max-workers 1 \
+ && poetry install --only main --no-root
+
+# Now copy the actual app files
+COPY . .
+
+# Expose FastAPI port
+EXPOSE 8000
+
+# Start FastAPI server
+CMD ["uvicorn", "iris_app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload", "--app-dir", "src"]

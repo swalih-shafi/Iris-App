@@ -21,7 +21,11 @@ function Dataset() {
     fetch("/iris2.csv")
       .then((res) => res.text())
       .then((csv) => {
-        const parsed = Papa.parse(csv, { header: true });
+        const parsed = Papa.parse(csv, {
+          header: true,
+          transformHeader: (header) => header.trim(), // <- Clean up header names
+        });
+
         const rows = parsed.data
           .filter((row) => Object.values(row).some((val) => val))
           .map((row) => ({
@@ -39,6 +43,7 @@ function Dataset() {
           Header: key,
           accessor: key,
         }));
+
         setData(rows);
         setFilteredData(rows);
         setColumns(cols);
@@ -87,7 +92,7 @@ function Dataset() {
       <div className="dataset-container">
         <h2>Iris Dataset</h2>
         <div className="dataset-controls">
-          <button onClick={() => setIsModalOpen(true)}>Filter Dataset</button>
+          <button className="filter-btn" onClick={() => setIsModalOpen(true)}>Filter Dataset</button>
           <div className="download-buttons">
             <button onClick={() => downloadCSV(filteredData)}>
               Download CSV

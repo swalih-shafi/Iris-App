@@ -35,5 +35,5 @@ def authenticate_user(username: str, password: str):
     user = db.get(User.username == username)
     if user and verify_password(password, user["password"]):
         return {"message": "Login successful", "user": user}
-    return {"error": "Invalid credentials"}
+    return {"error": "Username or Password is Invalid"}
 

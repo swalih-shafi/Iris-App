@@ -38,10 +38,6 @@
   color: #333;
 }
 
-.iris-table tr:hover {
-  background-color: #f0f4ff;
-}
-
 .dataset-controls {
   display: flex;
   justify-content: space-between;
@@ -79,8 +75,8 @@
 .iris-table th {
   position: sticky;
   top: 0;
-  background-color: var(--surface); /* Same as before */
-  z-index: 2; /* Keeps it above table cells while scrolling */
+  background-color: var(--surface);
+  z-index: 2;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 .sortable-header {
@@ -116,6 +112,9 @@
 
 .iris-table tbody tr:nth-child(odd) {
   background-color: #ffffff; /* White for odd rows */
+}
+.iris-table tbody tr:hover{
+  background-color: #f0f2f5;
 }
 .filter-btn {
   background-color: var(--CTA);

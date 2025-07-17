@@ -10,7 +10,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   background-color: #f7f7f7;
   font-family: "Segoe UI", sans-serif;
-  min-height: 92vh;
+  max-height: 91vh;
 }
 
 .predict-right {
@@ -26,6 +26,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   align-items: start;
+  text-align: left;
 }
 
 .predict-left h1 {
@@ -69,7 +70,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .predict-button {
   grid-column: span 2;
   padding: 0.8rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -119,4 +120,23 @@ input[type="number"]::-webkit-outer-spin-button {
   line-height: 1.6;
   margin-bottom: 0.8rem;
   color: #444;
+}
+.predict-right {
+  width: 60%;
+  background-color: var(--surface);
+  padding: 2rem 10rem 6rem 10rem; 
+  font-family: 'Montserrat';
+  overflow-y: auto;           /* Enable vertical scroll */
+  max-height: 100vh;          /* Prevent overflow from exceeding viewport */
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE and Edge */
+}
+
+
+.predict-wrapper {
+  display: flex;
+  background-color: #f7f7f7;
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;              /* Ensure full height for scrolling */
+  overflow: hidden;           /* Prevent body scroll */
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/register.css"; // global CSS file
+import "../styles/register.css";
+import AuthHeader from "../components/authHeader";
 
 function Login() {
   const [identifier, setIdentifier] = useState("");
@@ -35,39 +36,42 @@ function Login() {
   };
 
   return (
-    <div className="register-wrapper">
-      <div className="register-box">
-        <h2>Login</h2>
+    <>
+      <AuthHeader />
+      <div className="register-wrapper">
+        <div className="register-box">
+          <h2>Login</h2>
 
-        {error && (
-          <div className="alert error">
-            <p>{error}</p>
-          </div>
-        )}
+          {error && (
+            <div className="alert error">
+              <p>{error}</p>
+            </div>
+          )}
 
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Username or Email"
-            value={identifier}
-            onChange={(e) => setIdentifier(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Login</button>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Username or Email"
+              value={identifier}
+              onChange={(e) => setIdentifier(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit">Login</button>
+          </form>
 
-        <p className="redirect">
-          Don’t have an account? <a href="/register">Register</a>
-        </p>
+          <p className="redirect">
+            Don’t have an account? <a href="/register">Register</a>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

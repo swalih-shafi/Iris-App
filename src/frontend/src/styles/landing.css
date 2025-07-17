@@ -1,0 +1,126 @@
+body {    
+  overflow-y: auto;
+}
+
+.landing-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 0vw 3vw;
+}
+
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.why-scroll {
+  background-color: white;
+  height: 40vh;
+
+}
+.why-slide {
+  background-color: #f4f4f4;
+}
+
+.feature-section {
+  display: flex;
+  gap: 1vw;
+  justify-content: space-between;
+  padding-bottom: 10vh;
+} .feature-section img {
+  height: 40%;
+}
+
+.feature-card {
+  background-color: white;
+  width: 22vw;
+  height: 25rem;
+  border-radius: 0.7rem;
+  padding: 0 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+} .feature-card h3 {
+  font-size: 1.5rem;
+  margin: 1.5vh 0;
+} .feature-card p {
+  font-size: 1rem;
+  flex-grow: 1;
+  margin: 1rem 0;
+  padding-top: 0.5rem;
+} .feature-card a.button-link {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+} .feature-card a.button-link:hover {
+  background-color: #333;
+}
+
+#i { padding: 4% 0; }
+#j { padding: 3%; padding-right: 10%; }
+#o { padding: 3%; }
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 5vh;
+} .about-section img {
+  width: 20vw;
+  height: 20vw;
+  object-fit: cover;
+  border-radius: 50%;
+} .about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 2rem;
+} .about-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+} .about-title h1, .about-title h3 {
+  padding: 0;
+  margin: 0;
+} .about-passage {
+  text-align: justify;
+} 
+
+.site-footer{
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 4.5rem;
+  padding: 0 2rem;
+} .footer-links {
+  padding-left: 18vw;
+  height: 4.5rem;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  font-size: 1.5rem;
+} .reserved {
+  height: 4.5rem;
+  width: 34%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} .footer-logo {
+  width: 33%;
+}

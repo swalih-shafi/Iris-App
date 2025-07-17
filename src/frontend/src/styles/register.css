@@ -12,6 +12,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  height: calc(100vh - 4rem);
+  background-color: var(--surface);
 }
 
 .register-box {
@@ -44,14 +46,14 @@ body {
 }
 
 .register-box form input:focus {
-  border-color: #6a11cb;
+  border-color: var(--CTA);
   outline: none;
 }
 
 .register-box form button {
   width: 100%;
   padding: 12px;
-  background: #6a11cb;
+  background: var(--CTA);
   border: none;
   color: white;
   font-weight: bold;
@@ -62,7 +64,7 @@ body {
 }
 
 .register-box form button:hover {
-  background: #5711b4;
+  background: var(--secondary);
 }
 
 .alert {
@@ -91,7 +93,7 @@ body {
 }
 
 .redirect a {
-  color: #6a11cb;
+  color: var(--secondary);
   text-decoration: none;
   font-weight: bold;
 }

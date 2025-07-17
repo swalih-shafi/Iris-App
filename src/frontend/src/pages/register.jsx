@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/register.css";
+import AuthHeader from "../components/authHeader";
 
 function Register() {
   const [form, setForm] = useState({ username: "", email: "", password: "" });
@@ -60,52 +61,55 @@ function Register() {
   };
 
   return (
-    <div className="register-wrapper">
-      <div className="register-box">
-        <h2>Register</h2>
+    <>
+      <AuthHeader />
+      <div className="register-wrapper">
+        <div className="register-box">
+          <h2>Register</h2>
 
-        {error && (
-          <div className="alert error">
-            {error.split("|").map((msg, i) => (
-              <p key={i}>{msg.trim()}</p>
-            ))}
-          </div>
-        )}
+          {error && (
+            <div className="alert error">
+              {error.split("|").map((msg, i) => (
+                <p key={i}>{msg.trim()}</p>
+              ))}
+            </div>
+          )}
 
-        {success && <div className="alert success">{success}</div>}
+          {success && <div className="alert success">{success}</div>}
 
-        <form onSubmit={handleSubmit}>
-          <input
-            name="username"
-            placeholder="Username"
-            value={form.username}
-            onChange={handleChange}
-            required
-          />
-          <input
-            name="email"
-            type="email"
-            placeholder="Email"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            name="password"
-            type="password"
-            placeholder="Password (min 6 characters)"
-            value={form.password}
-            onChange={handleChange}
-            required
-          />
-          <button type="submit">Register</button>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <input
+              name="username"
+              placeholder="Username"
+              value={form.username}
+              onChange={handleChange}
+              required
+            />
+            <input
+              name="email"
+              type="email"
+              placeholder="Email"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              name="password"
+              type="password"
+              placeholder="Password (min 6 characters)"
+              value={form.password}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit">Register</button>
+          </form>
 
-        <p className="redirect">
-          Already have an account? <a href="/login">Login</a>
-        </p>
+          <p className="redirect">
+            Already have an account? <a href="/login">Login</a>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

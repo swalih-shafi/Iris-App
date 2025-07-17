@@ -1,5 +1,8 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends, Request
+from iris_app.utils.token import decode_token
+from iris_app.utils.history_db import save_prediction, get_user_history
 from iris_app.models.request_models import IrisInput
+from fastapi.responses import JSONResponse
 import joblib
 import numpy as np
 import os
@@ -33,8 +36,13 @@ model_path = os.path.abspath(
 )
 model = joblib.load(model_path)
 
+from fastapi import Request, Header
+
 @router.post("/predict")
-def predict_iris(data: IrisInput):
+def predict_iris(data: IrisInput, request: Request):
+    token = request.headers.get("Authorization", "").replace("Bearer ", "")
+    user_info = decode_token(token)
+
     input_data = np.array([
         data.sepal_length,
         data.sepal_width,
@@ -46,4 +54,22 @@ def predict_iris(data: IrisInput):
     species_map = {0: "setosa", 1: "versicolor", 2: "virginica"}
     species = species_map.get(prediction, "unknown")
 
+    if user_info:
+        save_prediction(
+            username=user_info["username"],
+            input_data=data.dict(),
+            prediction=species
+        )
+
     return {"species": species}
+
+@router.get("/history")
+async def fetch_history(request: Request):
+    token = request.headers.get("Authorization", "").replace("Bearer ", "")
+    user_info = decode_token(token)
+
+    if not user_info:
+        return JSONResponse(status_code=401, content={"error": "Unauthorized"})
+
+    history = get_user_history(user_info["username"])
+    return history
