@@ -11,8 +11,8 @@ app = FastAPI(
 )
 
 origins = [
-    "http://localhost:8080",                   # for local frontend dev
-    "https://your-netlify-site.netlify.app",   # for deployed Netlify site
+    "http://localhost:8080",                    # for local frontend dev
+    "https://iris-classify.netlify.app",        # for deployed Netlify site
 ]
 
 
