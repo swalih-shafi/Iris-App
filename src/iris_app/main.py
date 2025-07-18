@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from iris_app.api import router
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse 
 
 
 
@@ -26,6 +27,6 @@ app.add_middleware(
 
 app.include_router(router, prefix="/api")
 
-@app.get("/")
-def root():
-    return {"status": "Backend running"}
+@app.api_route("/", methods=["GET", "HEAD"])
+async def root():
+    return JSONResponse(content={"message": "OK"})
