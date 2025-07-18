@@ -47,33 +47,35 @@ function Predict() {
     }
 
     try {
-  const token = localStorage.getItem("token"); // make sure this key is correct
-  const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/predict`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`
-    },
-    body: JSON.stringify(form),
-  });
+      const token = localStorage.getItem("token"); // make sure this key is correct
+      const res = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/predict`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(form),
+        }
+      );
 
-  console.log("Raw response:", res);
+      console.log("Raw response:", res);
 
-  const data = await res.json();
-  console.log("Parsed JSON:", data);
+      const data = await res.json();
+      console.log("Parsed JSON:", data);
 
-  if (res.ok) {
-    setResult(data);
-  } else {
-    setResult({ error: data.error || "Prediction failed" });
-  }
-} catch (err) {
-  console.error("Fetch error:", err);
-  setResult({ error: "Server error" });
-} finally {
-  setLoading(false);
-}
-
+      if (res.ok) {
+        setResult(data);
+      } else {
+        setResult({ error: data.error || "Prediction failed" });
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
+      setResult({ error: "Server error" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const irisDescriptions = {
@@ -154,37 +156,37 @@ function Predict() {
           </form>
         </div>
 
-          <div className="predict-right">
-            {result && (
-              <>
-                <h3 style={{ fontWeight: 300, marginBottom: 0 }}>
-                  The dimensions match to be of species:
-                </h3>
-                <h1 style={{ fontSize: "2rem", marginTop: 0 }}>
-                  {result.species.charAt(0).toUpperCase() +
-                    result.species.slice(1)}
-                </h1>
-                <div className="predict-content">
-                  <img
-                    className="result-image"
-                    src={
-                      result.species === "setosa"
-                        ? setosaImg
-                        : result.species === "versicolor"
-                        ? versicolorImg
-                        : virginicaImg
-                    }
-                    alt={result.species}
-                  />
-                  <div className="predict-text">
-                    {irisDescriptions[result.species].map((p, idx) => (
-                      <p key={idx}>{p}</p>
-                    ))}
-                  </div>
+        <div className="predict-right">
+          {result && (
+            <>
+              <h3 style={{ fontWeight: 300, marginBottom: 0 }}>
+                The dimensions match to be of species:
+              </h3>
+              <h1 style={{ fontSize: "2rem", marginTop: 0 }}>
+                {result.species.charAt(0).toUpperCase() +
+                  result.species.slice(1)}
+              </h1>
+              <div className="predict-content">
+                <img
+                  className="result-image"
+                  src={
+                    result.species === "setosa"
+                      ? setosaImg
+                      : result.species === "versicolor"
+                      ? versicolorImg
+                      : virginicaImg
+                  }
+                  alt={result.species}
+                />
+                <div className="predict-text">
+                  {irisDescriptions[result.species].map((p, idx) => (
+                    <p key={idx}>{p}</p>
+                  ))}
                 </div>
-              </>
-            )}
-          </div>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </>
   );
